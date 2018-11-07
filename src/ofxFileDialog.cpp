@@ -84,7 +84,7 @@ void ofxFileDialog::draw() {
 		}
 	
 		// indent and draw dialogs
-		ofTranslate(s_charWidth*4, 0);
+		ofTranslate(s_charWidth * 4, 0);
 		switch(m_mode) {
 			case SAVEAS:
 				drawSaveAs();

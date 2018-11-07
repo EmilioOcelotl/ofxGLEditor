@@ -90,12 +90,21 @@ void ofxGLEditor::draw() {
 		ofEnableAlphaBlending();
 	
 		if(!bHideEditor) {
+			
+			if (m_fileDialog->isActive()){
+				 m_settings.setAlpha(0.125);
+			};
+			
+			m_editors[m_currentEditor]->draw();
+			
+			m_settings.setAlpha(1);
+			
 			if(m_fileDialog->isActive()) {
 				m_fileDialog->draw();
 			}
-			else {
-				m_editors[m_currentEditor]->draw();
-			}
+			// else {
+			//	m_editors[m_currentEditor]->draw();
+			// }
 		}
 		else { // make sure to update animation timing even if not drawn
 			m_editors[m_currentEditor]->updateTimestamps();

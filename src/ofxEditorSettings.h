@@ -44,13 +44,13 @@ class ofxEditorSettings {
 		void setConvertTabs(bool convert=true);
 		bool getConvertTabs();
 	
-	/// \section Alpha
+		/// \section Alpha
 	
 		/// set overall text alpha, clamped to 0.1 - 1.0, default: 1.0
 		void setAlpha(float alpha);
 		float getAlpha();
 	
-	/// \section Color
+		/// \section Color
 	
 		/// text color, default: white
 		/// overridden by color scheme if a scheme is set

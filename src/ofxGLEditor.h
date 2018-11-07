@@ -171,6 +171,8 @@ class ofxGLEditor {
 		/// set editor to 0 for the current editor
 		bool isSelection(int editor=0);
 		
+		string getFileDialogSelectedPath();
+		
 		/// number of lines of text in an editor
 		/// set editor to 0 for the current editor
 		unsigned int getNumLines(int editor=0);

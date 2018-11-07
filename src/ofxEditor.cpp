@@ -68,9 +68,9 @@ u32string ofxEditor::s_copyBuffer;
 float ofxEditor::s_time = 0;
 
 float ofxEditor::s_autoFocusError = 10;
-float ofxEditor::s_autoFocusSpeed = 1.0;
+float ofxEditor::s_autoFocusSpeed = 4;
 float ofxEditor::s_autoFocusMinScale = 0.5;
-float ofxEditor::s_autoFocusMaxScale = 5.0;
+float ofxEditor::s_autoFocusMaxScale = 1;
 
 bool ofxEditor::s_undo = true;
 unsigned int ofxEditor::s_undoMaxDepth = 10;
@@ -207,6 +207,7 @@ bool ofxEditor::loadFont(const std::string &font, int size) {
 		s_cursorWidth = MAX(floor(s_charWidth*0.3), 6);
 		s_autoFocusError = MAX(floor(s_charHeight*0.5), 16); // make sure the error space is proportional to the glyph size
 	}
+	return true;
 }
 
 //--------------------------------------------------------------
